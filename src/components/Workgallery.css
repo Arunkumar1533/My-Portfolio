@@ -1,0 +1,230 @@
+.lazy-image-container {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f0f0f0;
+    border-radius: 8px;
+}
+  
+.placeholder {
+    font-size: 14px;
+    color: #888;
+}
+.head-text h1{
+    font-family: 'fjalla one', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+
+}
+.head-text h4{
+   
+    font-family: 'fjalla one', sans-serif;
+    font-size: 1.5em;
+    font-weight:300;
+}
+.p-box {
+    background-color: #0f1a2b;
+    background-position-x: 20px;
+    position: relative;
+    z-index: -1;
+}
+
+.Project-title {
+   
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+
+.grid-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius:20px;
+}
+  
+.container1 {
+    
+    max-width: 1200px;
+    margin: 70px auto;
+    padding: 20px;
+}
+  
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    gap: 10px;
+}
+  
+.grid-item {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 20px;
+}
+  
+.grid-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0px;
+}
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #14213d98;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 0px;
+}
+  
+.grid-item:hover .overlay {
+    opacity: 1;
+}
+.load-more-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.load-more-button {
+    background-color: #14213d98;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: "Geist", sans-serif;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.load-more-button:hover {
+    background-color: #0f1a2b;
+}
+.title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+  
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+  
+.modal {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    position: relative;
+}
+  
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+  
+.modal-image {
+    width: 100%;
+    height: 300px;
+    border: #0f1a2b89 1.5px solid;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+  
+.modal-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #0f1a2b;
+}
+  
+.modal-description {
+    font-size: 20px;
+    font-weight: 700;
+    color: #555;
+}
+
+.modal-buttons{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+  
+  
+  }
+.modal-button {
+    padding: "10px 20px";
+   
+    color: "#fff";
+    border-radius: "10px";
+    text-decoration: "none";
+    text-align: "center";
+    font-size: "16px";
+    font-weight: "bold";
+    min-width: "120px";
+    text-align: "center";
+    transition: "background-color 0.3s ease-in-out";
+  }
+.modal-content{
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+.modal-extra-content{
+    max-height: 20vh;
+    text-align: justify;
+  padding: 15px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 600;
+  color: #333;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

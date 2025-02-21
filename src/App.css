@@ -1,0 +1,183 @@
+/* General reset */
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish", serif;
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+ 
+}
+
+
+
+
+/* Header */
+header {
+  color: #fee893;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #8ed5ff;
+  padding: 20px 0;
+  color: white;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+  height: 90vh;
+  background-color: black;
+  position: relative;
+}
+
+header nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  
+  gap: 2.5em;
+}
+
+header nav a {
+  color: #575757;
+  text-decoration: none;
+  font-size: 18px;
+  float:right;
+  
+}
+
+header nav a:hover {
+   
+  color: rgb(0, 6, 48);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Initially hidden */
+  width: 250px;
+  height: auto; /* Ensure it fits the screen height */
+  overflow-y: auto; /* Add scroll if content overflows */
+  background-color: #333;
+  padding: 20px;
+  color: white;
+  transition: left 0.3s ease;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+  color: #ffdd57;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+.sidebar.open {
+  left: 0; /* Show sidebar */
+}
+
+.sidebar-toggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  font-size: 30px;
+  color: white;
+}
+
+/* About Section */
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: auto; /* Adjust height to fit content */
+  align-items: center;
+  gap: 20px;
+}
+
+.about-section img {
+  width: 70vh;
+  height:80%;
+  align-items: flex-end;
+  object-fit: contain;
+}
+.about-section .name-tag{
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  width: 100%;
+  height: inherit;
+ 
+  z-index: 999;
+  
+}
+.about-section h2,h1 {
+  font-size: 36px;
+  font-weight: bold;
+  
+ 
+  
+}
+
+.about-section p {
+  font-size: 18px;
+  color: #666;
+}
+
+/* Work Gallery Section */
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Media Queries for tablet and mobile screens */
+@media (max-width: 768px) {
+  /* Show sidebar toggle button */
+  .sidebar-toggle {
+    display: block;
+    margin-right: 12px;
+    justify-content: flex-end;
+  }
+
+
+  /* Hide normal header nav */
+  header nav {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .about-section {
+    display: inline;
+  }
+  .sidebar-toggle {
+    display: block;
+    margin-right: 12px;
+    justify-content: flex-end;
+  }
+
+}
